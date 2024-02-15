@@ -1,3 +1,64 @@
+const detalleAportaciones = {
+  "Otros": [25000, 2500],
+  "Prima de antiguedad": [55000, 3500],
+  "Jubilacion": [160000, 4500],
+  "Saldo anterior empleado no deducible": [85000, 1500],
+  "Saldo anterior empresa no deducible": [55000, 2500],
+  "Contribucion definida empresa": [110000, 3500]
+};
+
+const distribucionCartera = {
+  "PRINFGUX1": [110000, 185000],
+  "PRINFGUX7": [90000, 13000],
+  "PRINLS2XC": [6000, 10000]
+};
+
+const query = `
+  UPDATE dat_query
+  SET
+    name = :name,
+    description = :description,
+    created_at = :created_at,
+    updated_at = :updated_at,
+    total_contributions = :total_contributions,
+    total_yields = :total_yields,
+    mandatory_contributions = :mandatory_contributions,
+    voluntary_contributions = :voluntary_contributions,
+    period = :period,
+    efectivo_por_invertir = :efectivo_por_invertir,
+    detalle_aportaciones = :detalle_aportaciones,
+    distribucion_cartera = :distribucion_cartera
+  WHERE id_user = :id_user
+`;
+
+await db.query(query, {
+  replacements: {
+    name: 'Consulta 2',
+    description: 'Descripción de la consulta 2',
+    created_at: '2024-02-16T09:30:00Z',
+    updated_at: '2024-02-16T09:30:00Z',
+    total_contributions: 600000,
+    total_yields: 30000,
+    mandatory_contributions: 350000,
+    voluntary_contributions: 250000,
+    period: [1139339.00, 224322.0, 11330.05],
+    efectivo_por_invertir: 150000.00,
+    detalle_aportaciones: JSON.stringify(detalleAportaciones),
+    distribucion_cartera: JSON.stringify(distribucionCartera),
+    id_user: 3
+  },
+  type: db.QueryTypes.UPDATE
+});
+
+
+
+
+
+
+
+
+
+
 INSERT INTO dat_query (
     name, 
     description, 
