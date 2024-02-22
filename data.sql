@@ -1,3 +1,29 @@
+INSERT INTO tabla_fondos
+(id, codigo_fondo, monto_invertido, ganancia_1, ganancia_2, balance, edad_inversor, rendimiento, description)
+VALUES
+(21, 'PRINFGUX1', 5283742.58, 0.00, 0.00, 52549.57, 27, 27.869477, 'Fondo enfocado en maximizar el crecimiento a largo plazo para jubilación entre 2046 y 2055.'),
+(23, 'PRINFGUX7', 507482.93, 0.00, 0.00, -1711.67, 29, 29.840876, 'Inversión estratégica en tecnología y energías renovables para rendimientos sostenibles.'),
+(30, 'PRINLS2XC', 2833900.65, 0.00, 0.00, -37169.37, 23, 23.331158, 'Cartera diversificada en mercados emergentes y desarrollados, enfocada en 2046-2055.'),
+(32, 'PRINFGUX2', 1548700.00, 0.00, 0.00, 2450.00, 31, 31.457812, 'Fondo de inversión en bienes raíces comerciales para inversores a largo plazo.'),
+(34, 'PRINFGUX8', 600482.75, 0.00, 0.00, -1250.34, 28, 28.942761, 'Inversión en bonos corporativos y gubernamentales con alto rendimiento.'),
+(36, 'PRINLS3XC', 3900876.42, 0.00, 0.00, -48760.12, 22, 22.876543, 'Fondo que combina crecimiento y renta fija para un retiro seguro entre 2046 y 2055.'),
+(37, 'PRINFGUX3', 2759471.89, 0.00, 0.00, 15789.47, 26, 26.478924, 'Estrategia agresiva en acciones globales para inversores que buscan crecimiento.'),
+(39, 'PRINFGUX9', 812394.67, 0.00, 0.00, -2314.55, 30, 30.123456, 'Fondo de alto riesgo y alto rendimiento, ideal para perfiles arriesgados.'),
+(40, 'PRINLS4XC', 4871230.12, 0.00, 0.00, -58761.33, 24, 24.987654, 'Portafolio de inversiones en infraestructura global con enfoque en energía verde.'),
+(41, 'PRINFGUX4', 3256789.45, 0.00, 0.00, 16890.22, 25, 25.765432, 'Fondo mixto que incluye acciones, bonos y commodities para diversificación.'),
+(42, 'PRINFGUX10', 924567.34, 0.00, 0.00, -3456.78, 32, 32.543210, 'Inversión dirigida a sectores de rápido crecimiento como tecnología y salud.'),
+(43, 'PRINLS5XC', 5342768.89, 0.00, 0.00, -69782.44, 21, 21.098765, 'Fondo conservador, ideal para perfiles con aversión al riesgo, enfocado en bonos.'),
+(44, 'PRINFGUX5', 3758921.56, 0.00, 0.00, 18901.33, 27, 27.654321, 'Estrategia de inversión en mercados internacionales para diversificar riesgos.'),
+(45, 'PRINFGUX11', 1034890.12, 0.00, 0.00, -4598.99, 29, 29.321098, 'Fondo de renta variable con énfasis en empresas con alto potencial de crecimiento.'),
+(46, 'PRINLS6XC', 5890345.67, 0.00, 0.00, -80893.22, 20, 20.876543, 'Inversión en activos de renta fija con enfoque en la estabilidad y rentas periódicas.'),
+(47, 'PRINFGUX6', 4283764.23, 0.00, 0.00, 20912.88, 26, 26.987654, 'Fondo especializado en sectores como el financiero y tecnológico para maximizar rendimientos.'),
+(48, 'PRINFGUX12', 1126789.56, 0.00, 0.00, -5740.67, 31, 31.210987, 'Fondo que apuesta por la innovación en startups y empresas de nueva creación.'),
+(49, 'PRINLS7XC', 6438901.78, 0.00, 0.00, -91904.11, 19, 19.765432, 'Opción de inversión segura en oro y otros metales preciosos para proteger activos.'),
+(50, 'PRINFGUX13', 4805692.34, 0.00, 0.00, 22924.45, 28, 28.123456, 'Cartera equilibrada con enfoque en sostenibilidad y responsabilidad social corporativa.'),
+(51, 'PRINFGUX14', 1220890.78, 0.00, 0.00, -6882.56, 33, 33.098765, 'Fondo dirigido a inversiones en educación y desarrollo humano, con impacto social positivo.');
+`);
+
+
 const detalleAportaciones = {
   "Otros": [25000, 2500],
   "Prima de antiguedad": [55000, 3500],
