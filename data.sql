@@ -1,3 +1,37 @@
+CREATE TABLE dat_account_summary (
+    id_summary SERIAL PRIMARY KEY,
+    contributions NUMERIC(15,2),
+    yields NUMERIC(15,2),
+    total_balance NUMERIC(15,2),
+    acquired_right NUMERIC(5,2),
+    employee_contribution_amount NUMERIC(15,2),
+    employee_contribution_percentage NUMERIC(5,2),
+    employer_contribution_amount NUMERIC(15,2),
+    employer_contribution_percentage NUMERIC(5,2),
+    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    id_user INTEGER REFERENCES dat_user(id_user)
+);
+
+INSERT INTO dat_account_summary (
+    contributions, 
+    yields, 
+    total_balance, 
+    acquired_right, 
+    employee_contribution_amount, 
+    employee_contribution_percentage, 
+    employer_contribution_amount, 
+    employer_contribution_percentage, 
+    id_user
+) VALUES 
+(5000.00, 200.00, 5200.00, 5.00, 2500.00, 50.00, 2500.00, 50.00, 1),
+(7500.00, 300.00, 7800.00, 10.00, 3750.00, 50.00, 3750.00, 50.00, 2),
+(10000.00, 500.00, 10500.00, 20.00, 5000.00, 50.00, 5000.00, 50.00, 3);
+
+-- Añade tantos registros como necesites
+
+
+
 INSERT INTO tabla_fondos
 (id, codigo_fondo, monto_invertido, ganancia_1, ganancia_2, balance, edad_inversor, rendimiento, description)
 VALUES
