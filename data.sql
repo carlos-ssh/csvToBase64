@@ -1,3 +1,29 @@
+await db.query(`
+  CREATE TEMPORARY TABLE IF NOT EXISTS detalle_cartera_inversion (
+    Cuenta VARCHAR(255),
+    Posicion_Inicial DECIMAL(10, 2) NOT NULL,
+    Aportaciones DECIMAL(10, 2) NOT NULL,
+    Rendimiento DECIMAL(10, 2) NOT NULL,
+    Cargos DECIMAL(10, 2) NOT NULL,
+    Saldo DECIMAL(10, 2) NOT NULL,
+    Derecho_Adquirido DECIMAL(10, 2) NOT NULL,
+    Titulos INT NOT NULL,
+    Precio DECIMAL(10, 2) NOT NULL
+  );
+
+  INSERT INTO detalle_cartera_inversion (Cuenta, Posicion_Inicial, Aportaciones, Rendimiento, Cargos, Saldo, Derecho_Adquirido, Titulos, Precio) VALUES
+  ('APORTACION VOLUNTARIA EMPLEADO - EFE 120154925', 195.00, 5349.63, 100.00, 10.00, 195.00, 195.00, 14, 195.00),
+  ('APORTACION VOLUNTARIA EMPLEADO - PRINFGUJX1', 500.00, 1000.00, 50.00, 5.00, 500.00, 500.00, 11, 50.00),
+  ('APORTACION VOLUNTARIA EMPLEADO - PRINFGUJX7', 5267.00, 1500.00, 113.00, 15.00, 5267.00, 5267.00, 9, 300.00),
+  ('APORTACION OBLIGATORIA EMPRESA - EFE 120154925', 3735.00, 4863.00, 200.00, 20.00, 3735.00, 3735.00, 6, 3735.00),
+  ('APORTACION OBLIGATORIA EMPRESA - PRINL52XC', 2500.00, 4500.00, 33.00, 3.50, 2781.00, 2781.00, 3, 900.00),
+  ('APORTACION OBLIGATORIA EMPRESA - PRINEGUX1', 268.00, 750.00, 0.14, 1.00, 268.00, 268.00, 5, 268.00);
+
+  SELECT * FROM detalle_cartera_inversion;
+`);
+
+
+
 CREATE TABLE dat_account_summary (
     id_summary SERIAL PRIMARY KEY,
     contributions NUMERIC(15,2),
